@@ -1,0 +1,12 @@
+<% if user_signed_in? %>
+  <li><%= link_to t('layouts.shared.navigation.edit_account', :default => 'Edit account'), edit_user_registration_path, :class => "nav-link active" %></li>
+  <li><%= link_to t('layouts.shared.navigation.sign_out', :default => 'Sign out'), destroy_user_session_path, :class => "nav-link active", :method => :delete %></li>
+<% else %>
+  <li><%= link_to t('layouts.shared.navigation.sign_in', :default => 'Sign in') , new_user_session_path, :class => "nav-link active" %></li>
+  <li><%= link_to t('layouts.shared.navigation.sign_up', :default => 'Sign up'), new_user_registration_path, :class => "nav-link active" %></li>
+<% end %>
+<% if user_signed_in? %>
+  <% if current_user.try(:admin?) %>
+    <li><%= link_to t('layouts.shared.navigation.users', :default => 'Users'), users_path %></li>
+  <% end %>
+<% end %>

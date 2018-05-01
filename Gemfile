@@ -68,3 +68,12 @@ gem "font-awesome-rails"
 # for static pages
 
 gem 'high_voltage', '~> 3.0.0'
+
+
+gem 'devise'
+
+gem 'devise-i18n'
+
+# devise bootstrap4 views
+
+gem 'devise-bootstrap-views', :git => 'https://github.com/hisea/devise-bootstrap-views.git', :branch => 'bootstrap4'
