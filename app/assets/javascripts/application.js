@@ -12,7 +12,8 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require bootstrap
+//= require material
 //= require_tree .
-//= require jquery3
+//= require jquery
 //= require popper
-//= require bootstrap-sprockets

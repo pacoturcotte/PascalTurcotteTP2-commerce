@@ -1,0 +1,14 @@
+<p>
+  <strong>Titre:</strong>
+  <%= @discussion.titre %>
+</p>
+
+<p>
+  <strong>Contenu:</strong>
+  <%= @discussion.contenu %>
+</p>
+
+<hr>
+
+<%= link_to 'Edit', edit_discussion_path(@discussion), class: "btn btn-flat-dark my-xs" %> |
+<%= link_to 'Back', discussions_path, class: "btn btn-flat-dark my-xs" %>

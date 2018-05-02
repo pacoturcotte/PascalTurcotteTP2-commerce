@@ -62,16 +62,19 @@ gem 'jquery-rails'
 
 # icons for bootstrap
 
-gem "font-awesome-rails"
+# gem "font-awesome-rails"
 
+gem 'material-sass'
+
+gem 'material_icons'
 
 # for static pages
 
 gem 'high_voltage', '~> 3.0.0'
 
 
-gem 'devise'
 
+gem 'devise'
 gem 'devise-i18n'
 
 # devise bootstrap4 views

@@ -1,0 +1,27 @@
+<h3>Forum du jeu</h3>
+
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Titre</th>
+      <th scope="col">Contenu</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @discussions.each do |discussion| %>
+      <tr>
+        <td><%= discussion.titre %></td>
+        <td><%= discussion.contenu %></td>
+        <td><%= link_to 'Show', discussion, class: "btn btn-flat-dark my-xs" %></td>
+        <td><%= link_to 'Edit', edit_discussion_path(discussion), class:"btn btn-flat-dark my-xs" %></td>
+        <td><%= link_to 'Destroy', discussion, method: :delete, data: { confirm: 'En êtes-vous certain?' }, class:"btn btn-flat-dark my-xs" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nouvelle discussion', new_discussion_path, class: "btn btn-dark my-xs" %>

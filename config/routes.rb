@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :discussions
   devise_for :users
   get 'visiteur/index'
 
